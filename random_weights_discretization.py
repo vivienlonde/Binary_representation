@@ -89,7 +89,7 @@ def plot_cost_function_and_result(P, x_min):
     plt.plot(X_plot, Y_P_plot, label = 'Cost function')
     plt.plot([x_min], [polyval(x_min, P)], 'ro')
     plt.legend()
-    plt.savefig('cost_function_and_found_minimum.png')
+    # plt.savefig('cost_function_and_found_minimum.png')
     plt.show()
 
 
