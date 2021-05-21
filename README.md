@@ -1,3 +1,4 @@
 # Binary_representation
 
-Discretize a continuous cost function and find its minimum with Azure Quantum.
+P is a polynomial of the real variable x.
+Discretize x and find the argmin of P with Azure Quantum.
