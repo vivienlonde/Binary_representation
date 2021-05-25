@@ -6,7 +6,8 @@ Polynomial = [0, 0, -0.2, 0.06, 0.3]      ### P = -0.2*x**2 + 0.06*x**3 + 0.3*x*
 nb_trials = 20
 
 # filepath = os.path.join(sys.path[0], 'data/precision_uniform_weights.txt')
-filepath = os.path.join(sys.path[0], 'data/precision_exponential_weights_scale_1.txt')
+# filepath = os.path.join(sys.path[0], 'data/precision_exponential_weights_scale_1.txt')
+filepath = os.path.join(sys.path[0], 'data/precision_exponential_weights_scale_100.txt')
 with open(filepath, 'w') as output:
     
     for n in range(2, 21):

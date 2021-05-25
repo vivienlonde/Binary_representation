@@ -52,7 +52,7 @@ def create_problem(cost_function, nb_binary_variables) -> Problem:
 
     indices = range(nb_binary_variables)
     # random_weights = np.array([rd.random() for _ in indices])
-    random_weights = np.array([np.random.exponential(scale=1) for _ in indices])
+    random_weights = np.array([np.random.exponential(scale=100) for _ in indices])
     random_weights = random_weights/sum(random_weights)               ### Normalize random_weights to sum to 1.
 
     reduced_variable_subset_list = []
