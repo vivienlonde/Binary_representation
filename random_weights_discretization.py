@@ -51,8 +51,8 @@ def create_problem(cost_function, nb_binary_variables) -> Problem:
     problem_type = ProblemType.ising
 
     indices = range(nb_binary_variables)
-    # random_weights = np.array([rd.random() for _ in indices])
-    random_weights = np.array([np.random.exponential(scale=100) for _ in indices])
+    random_weights = np.array([rd.random() for _ in indices])
+    # random_weights = np.array([np.random.exponential(scale=100) for _ in indices])
     random_weights = random_weights/sum(random_weights)               ### Normalize random_weights to sum to 1.
 
     reduced_variable_subset_list = []
@@ -109,7 +109,7 @@ def main():
 
     random_weights, problem = create_problem(Polynomial, n)
     workspace = create_workspace()
-    solver = SimulatedAnnealing(workspace)
+    solver = QuantumMonteCarlo(workspace)
     result = solver.optimize(problem)
 
     x_min, cost = get_continuous_variable_result(result, random_weights, Polynomial)
